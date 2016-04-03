@@ -15,6 +15,7 @@
 		93C762291CB0E32800D9C3CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C762271CB0E32800D9C3CD /* LaunchScreen.storyboard */; };
 		93C762341CB0E32800D9C3CD /* PasswordTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C762331CB0E32800D9C3CD /* PasswordTextFieldTests.m */; };
 		93C7623F1CB0E32900D9C3CD /* PasswordTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C7623E1CB0E32900D9C3CD /* PasswordTextFieldUITests.m */; };
+		93C7624E1CB0E41200D9C3CD /* PassWordTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C7624C1CB0E41200D9C3CD /* PassWordTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		93C7623A1CB0E32800D9C3CD /* PasswordTextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PasswordTextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C7623E1CB0E32900D9C3CD /* PasswordTextFieldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordTextFieldUITests.m; sourceTree = "<group>"; };
 		93C762401CB0E32900D9C3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93C7624C1CB0E41200D9C3CD /* PassWordTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassWordTextField.m; sourceTree = "<group>"; };
+		93C7624D1CB0E41200D9C3CD /* PassWordTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassWordTextField.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 		93C762181CB0E32800D9C3CD /* PasswordTextField */ = {
 			isa = PBXGroup;
 			children = (
+				93C7624C1CB0E41200D9C3CD /* PassWordTextField.m */,
+				93C7624D1CB0E41200D9C3CD /* PassWordTextField.h */,
 				93C7621C1CB0E32800D9C3CD /* AppDelegate.h */,
 				93C7621D1CB0E32800D9C3CD /* AppDelegate.m */,
 				93C7621F1CB0E32800D9C3CD /* ViewController.h */,
@@ -273,6 +278,7 @@
 			files = (
 				93C762211CB0E32800D9C3CD /* ViewController.m in Sources */,
 				93C7621E1CB0E32800D9C3CD /* AppDelegate.m in Sources */,
+				93C7624E1CB0E41200D9C3CD /* PassWordTextField.m in Sources */,
 				93C7621B1CB0E32800D9C3CD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +509,7 @@
 				93C762451CB0E32900D9C3CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93C762461CB0E32900D9C3CD /* Build configuration list for PBXNativeTarget "PasswordTextFieldTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +518,7 @@
 				93C762481CB0E32900D9C3CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93C762491CB0E32900D9C3CD /* Build configuration list for PBXNativeTarget "PasswordTextFieldUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +527,7 @@
 				93C7624B1CB0E32900D9C3CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
