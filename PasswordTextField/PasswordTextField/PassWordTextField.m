@@ -67,6 +67,22 @@
     return self;
 }
 
+- (void)setPassWordFailed:(BOOL)passWordFailed
+{
+    _passWordFailed = passWordFailed;
+    if (passWordFailed) {
+        //1s动画
+        CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+        animation.keyPath = @"position.x";
+        animation.values = @[ @0, @15, @-15, @15, @0 ];
+        animation.keyTimes = @[ @0, @(1 / 6.0), @(3 / 6.0), @(5 / 6.0), @1 ];
+        animation.duration = 0.4;
+        
+        animation.additive = YES;
+        [self.layer addAnimation:animation forKey:@"shake"];
+    }
+}
+
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
     if (textField.text.length >= pwd_count && string.length) {
@@ -97,7 +113,7 @@
         }
         
         //从父视图上移除
-        [self performSelector:@selector(dismiss) withObject:nil afterDelay:0.1f];
+        [self performSelector:@selector(dismiss) withObject:nil afterDelay:1.0f];
     }
     return YES;
 }

@@ -11,6 +11,7 @@
 
 @interface ViewController ()<UIAlertViewDelegate>
 
+@property(strong,nonatomic)PassWordTextField *textField;
 @end
 
 @implementation ViewController
@@ -27,11 +28,17 @@
     CGFloat width = self.view.bounds.size.width - 80;
     PassWordTextField *textField = [[PassWordTextField alloc] initWithFrame:CGRectMake( 40, 100,width , width/6)];
     [self.view addSubview:textField];
+    self.textField = textField;
     
-    __weak typeof(self) vc = self;
+    __weak typeof(self) weakself = self;
     textField.completeHandle = ^(NSString *passWord){
-        
-        [vc showPassWordWithTitle:@"输入的密码" andMessage:passWord];
+    
+        if (![passWord isEqualToString:@"123456"]) {
+            weakself.textField.passWordFailed = YES;
+        }else{
+            [weakself showPassWordWithTitle:@"输入的密码" andMessage:passWord];
+
+        }
     };
     
 }

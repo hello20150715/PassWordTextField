@@ -104,8 +104,8 @@
 		93C762181CB0E32800D9C3CD /* PasswordTextField */ = {
 			isa = PBXGroup;
 			children = (
-				93C7624C1CB0E41200D9C3CD /* PassWordTextField.m */,
 				93C7624D1CB0E41200D9C3CD /* PassWordTextField.h */,
+				93C7624C1CB0E41200D9C3CD /* PassWordTextField.m */,
 				93C7621C1CB0E32800D9C3CD /* AppDelegate.h */,
 				93C7621D1CB0E32800D9C3CD /* AppDelegate.m */,
 				93C7621F1CB0E32800D9C3CD /* ViewController.h */,

@@ -12,4 +12,7 @@
 
 @property(copy,nonatomic) void(^completeHandle)(NSString *passWord);
 
+//密码验证失败
+@property(assign,nonatomic)BOOL passWordFailed;
+
 @end
