@@ -11,7 +11,7 @@
 #define pwd_count 6 //密码长度
 #define dot_width 10  //小黑点宽度
 
-@interface PassWordTextField()<UITextFieldDelegate>
+@interface PassWordTextField()<UITextFieldDelegate,UIAlertViewDelegate>
 
 @property(strong,nonatomic)UITextField *textField;
 
@@ -58,7 +58,7 @@
             }
             //分割线
             UILabel *line = [[UILabel alloc] initWithFrame:CGRectMake((i+1) * width, 0, 0.5, height)];
-            line.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1.0];
+            line.backgroundColor = [UIColor colorWithRed:0.7 green:0.7 blue:0.7 alpha:1.0];
             [self addSubview:line];
         }
         
@@ -80,6 +80,9 @@
         
         animation.additive = YES;
         [self.layer addAnimation:animation forKey:@"shake"];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"密码错误" delegate:self cancelButtonTitle:@"重新输入" otherButtonTitles:nil, nil];
+        [alert show];
     }
 }
 
@@ -95,7 +98,7 @@
     }
     
     NSString *totalString;
-    if (string.length <= 0) { //这种情况是删除的时候if条件成立
+    if (string.length <= 0) { //删除的时候if条件成立
         totalString = [textField.text substringToIndex:textField.text.length-1];
     }
     else {
@@ -113,7 +116,7 @@
         }
         
         //从父视图上移除
-        [self performSelector:@selector(dismiss) withObject:nil afterDelay:1.0f];
+//        [self performSelector:@selector(dismiss) withObject:nil afterDelay:1.0f];
     }
     return YES;
 }
@@ -140,5 +143,16 @@
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];
+}
+
+#pragma mark -- UIAlertView Delegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        [self.textField setText:@""];
+        [self setDotWithCount:0];
+    }else{
+        
+    }
 }
 @end

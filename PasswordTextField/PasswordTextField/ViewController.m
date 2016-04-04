@@ -40,7 +40,6 @@
 
         }
     };
-    
 }
 
 - (void)showPassWordWithTitle:(NSString *)title andMessage:(NSString *)message
@@ -52,11 +51,11 @@
     
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelButtonTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
         
-        [self initPassWordTextField];
+
     }];
     
     UIAlertAction *otherAction = [UIAlertAction actionWithTitle:otherButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        [self initPassWordTextField];
+
         
         
     }];
